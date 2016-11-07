@@ -22,14 +22,13 @@ void loop() {
 
   
 
- if (millis()%10==0){
+ if (millis()%5==0){
     lastbuttonstate=buttonstate;
     lastbuttonstate2 = buttonstate2;
 int buttonstate = digitalRead(button1);
-delay(10);
 int buttonstate2 = digitalRead(button2);
-delay(10);
-  
+
+ }
     if (buttonstate != lastbuttonstate) {
       value = value + 5;
 
@@ -40,7 +39,7 @@ delay(10);
     value = value - 5;
 
   }
- }
+ 
   
  
 
