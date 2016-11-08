@@ -22,29 +22,31 @@ void loop() {
 
   
 
- if (millis()%5==0){
     lastbuttonstate=buttonstate;
     lastbuttonstate2 = buttonstate2;
-int buttonstate = digitalRead(button1);
-int buttonstate2 = digitalRead(button2);
+    buttonstate = digitalRead(button1);
+    buttonstate2 = digitalRead(button2);
 
- }
-    if (buttonstate != lastbuttonstate) {
+
+ 
+    if (buttonstate < lastbuttonstate) {
       value = value + 5;
 
     }
    
 
-  if (buttonstate2 != lastbuttonstate2) {
+  if (buttonstate2 < lastbuttonstate2) {
     value = value - 5;
 
   }
  
-  
+ 
  
 
   if (millis() % 1000 == 0) {
+    
     laston = 1-laston;
+    
     if (laston==1) {
       brightness = 0;
     } else {
