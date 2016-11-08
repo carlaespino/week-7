@@ -26,8 +26,10 @@ void loop() {
     startpress = millis();
   }
 
-/*if (last_buttonvalue == 0 && buttonvalue==1){}*/
-    millis_held = (millis() - startpress);
+if (last_buttonvalue == 0 && buttonvalue==1){
+      millis_held = (millis() - startpress);
+  }
+
 
 
 
